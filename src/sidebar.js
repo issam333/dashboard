@@ -16,19 +16,22 @@ import {
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { render } from "@testing-library/react";
 import Navbar from "./navbar";
 
+export default function Sidebar({ sidebarVisible }) {
+  const styles = {
+    translate: "-150px 0",
+  };
 
-export default function Sidebar() {
-
-  
   return (
     <>
-      <Navbar />
-      <div className='sidebar'>
-        <h2 style={{color:'red',}}></h2>
+      <div
+        className="sidebar"
+        style={sidebarVisible ? { translate: "-90% 0" } : {}}
+      >
+        <h2 style={{ color: "red" }}></h2>
         <h2>DASHBOARD</h2>
         <div className="sideBarsItems2">
           <Link className="item" to="/dachboard">
@@ -39,9 +42,8 @@ export default function Sidebar() {
             <a id="test">ecomerce</a>
           </Link>
         </div>
-
         <h2>PAGES</h2>
-        <div className="sideBarsItems2" >
+        <div className="sideBarsItems2">
           <Link to="/orders" className="item">
             <FontAwesomeIcon
               icon={faCartShopping}
@@ -135,5 +137,5 @@ export default function Sidebar() {
         </div>
       </div>
     </>
-  )
+  );
 }
