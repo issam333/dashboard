@@ -29,7 +29,7 @@ export default function Sidebar({ sidebarVisible }) {
     <>
       <div
         className="sidebar"
-        style={sidebarVisible ? { translate: "-90% 0" } : {}}
+        style={sidebarVisible ? { translate: "-100% 0" } : {}}
       >
         <h2 style={{ color: "red" }}></h2>
         <h2>DASHBOARD</h2>

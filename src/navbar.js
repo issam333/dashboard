@@ -13,8 +13,6 @@ import Content from "./content";
 import { render } from "@testing-library/react";
 
 export default function Navbar({ isSidebarVisible, toggleSidebarVisiblity }) {
-  const [sidebarVisible, setSidebarVisible] = useState(true);
-
   const toggleSidebar = () => {
     toggleSidebarVisiblity(!isSidebarVisible);
   };
@@ -24,7 +22,7 @@ export default function Navbar({ isSidebarVisible, toggleSidebarVisiblity }) {
       <div className="item2">
         <div
           className="leftContent"
-          style={isSidebarVisible ? { translate: "-90% 0" } : {}}
+          style={isSidebarVisible ? { translate: "-100% 0" } : {}}
         >
           <FontAwesomeIcon
             className="iconsLeft"
