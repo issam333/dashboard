@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
+<<<<<<< HEAD
 export default function Navbar({ sidebarVisible, toggleSidebarVisiblity }) {
   // saerch
   const [search, setSearch] = useState(false);
@@ -24,6 +25,9 @@ export default function Navbar({ sidebarVisible, toggleSidebarVisiblity }) {
     };
 
   // bars
+=======
+export default function Navbar({ isSidebarVisible, toggleSidebarVisiblity }) {
+>>>>>>> f4aae1e650dee48bf4cba087f930f138fe8e0b31
   const toggleSidebar = () => {
     
     toggleSidebarVisiblity(!sidebarVisible);
@@ -31,12 +35,21 @@ export default function Navbar({ sidebarVisible, toggleSidebarVisiblity }) {
   };
 
   return (
+<<<<<<< HEAD
     <>
       <div
         className="item2"
         style={sidebarVisible   ? { gridColumn: "1/13" } : {}}
       >
         <div className="leftContent">
+=======
+    <div>
+      <div className="item2">
+        <div
+          className="leftContent"
+          style={isSidebarVisible ? { translate: "-100% 0" } : {}}
+        >
+>>>>>>> f4aae1e650dee48bf4cba087f930f138fe8e0b31
           <FontAwesomeIcon
             className="iconsLeft"
             icon={faBars}
