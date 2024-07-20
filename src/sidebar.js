@@ -30,11 +30,7 @@ export default function Sidebar({ sidebarVisible }) {
     <>
       <div
         className="sidebar"
-<<<<<<< HEAD
         style={sidebarVisible ? { translate: "-100% 0" } : {translate: "0% 0"}}
-=======
-        style={sidebarVisible ? { translate: "-100% 0" } : {}}
->>>>>>> f4aae1e650dee48bf4cba087f930f138fe8e0b31
       >
         <h2>DASHBOARD</h2>
         <div className="sideBarsItems2">
