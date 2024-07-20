@@ -15,7 +15,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function chart() {
+export default function charts1() {
   const data = [
     {
       name: 2018,

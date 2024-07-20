@@ -3,25 +3,22 @@ import Sidebar from "./sidebar";
 import Navbar from "./navbar";
 import Content from "./content";
 import Dachboard from "./dachboard";
-import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const [sidebarVisible, setsidebarVisible] = useState(true);
-
-  useEffect(() => {
-    console.log(sidebarVisible);
-  }, [sidebarVisible]);
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   return (
     <>
       <div className="body">
         <Sidebar sidebarVisible={sidebarVisible} />
         <Navbar
-          isSidebarVisible={sidebarVisible}
-          toggleSidebarVisiblity={setsidebarVisible}
+          sidebarVisible={sidebarVisible}
+          toggleSidebarVisiblity={setSidebarVisible}
         />
-        <Content />
+        <Content 
+          isContentVisible={sidebarVisible}
+        />
       </div>
     </>
   );

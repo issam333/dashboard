@@ -1,13 +1,11 @@
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCube, faRotate, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faSellsy } from "@fortawesome/free-brands-svg-icons";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
-import Chart from "./component/charts";
+import Charts1 from "./component/charts1";
 import Charts2 from "./component/charts2";
 import Charts3 from "./component/charts3";
 import Charts4 from "./component/charts4";
-
 
 export default function Dachboard() {
   return (
@@ -85,7 +83,7 @@ export default function Dachboard() {
               style={{
                 fontSize: "10px",
                 fontWeight: "700",
-                color: 'rgb(0, 194, 146)',
+                color: "rgb(0, 194, 146)",
               }}
             >
               30%
@@ -124,7 +122,13 @@ export default function Dachboard() {
             }}
           >
             <p>659</p>
-            <p style={{ fontSize: "10px", fontWeight: "700", color: "rgb(0, 194, 146)" }}>
+            <p
+              style={{
+                fontSize: "10px",
+                fontWeight: "700",
+                color: "rgb(0, 194, 146)",
+              }}
+            >
               +20%
             </p>
           </div>
@@ -228,7 +232,7 @@ export default function Dachboard() {
 
         <div id="itemsDachboard6">
           <div style={{ height: "150px", width: "100%", overflow: "hidden" }}>
-            <Chart />
+            <Charts1 />
           </div>
           <div style={{ height: "150px" }}>
             <Charts2 />

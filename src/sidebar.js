@@ -17,21 +17,21 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { render } from "@testing-library/react";
-import Navbar from "./navbar";
+
 
 export default function Sidebar({ sidebarVisible }) {
+  
   const styles = {
     translate: "-150px 0",
   };
 
+  
   return (
     <>
       <div
         className="sidebar"
-        style={sidebarVisible ? { translate: "-90% 0" } : {}}
+        style={sidebarVisible ? { translate: "-100% 0" } : {translate: "0% 0"}}
       >
-        <h2 style={{ color: "red" }}></h2>
         <h2>DASHBOARD</h2>
         <div className="sideBarsItems2">
           <Link className="item" to="/dachboard">
@@ -58,7 +58,7 @@ export default function Sidebar({ sidebarVisible }) {
             />
             employes
           </Link>
-          <Link to="/" className="item">
+          <Link to="/customers" className="item">
             <FontAwesomeIcon
               icon={faUserGear}
               style={{ color: "rgb(148, 157, 178)" }}
@@ -68,28 +68,14 @@ export default function Sidebar({ sidebarVisible }) {
         </div>
         <h2>APPS</h2>
         <div className="sideBarsItems2">
-          <Link to="/" className="item">
+          <Link to="/calendar" className="item">
             <FontAwesomeIcon
               icon={faCalendar}
               style={{ color: "rgb(148, 157, 178)" }}
             />
             calendar
           </Link>
-          <Link to="/" className="item">
-            <FontAwesomeIcon
-              icon={faChartColumn}
-              style={{ color: "rgb(148, 157, 178)" }}
-            />
-            kanban
-          </Link>
-          <Link to="/" className="item">
-            <FontAwesomeIcon
-              icon={faPenToSquare}
-              style={{ color: "rgb(148, 157, 178)" }}
-            />
-            editor
-          </Link>
-          <Link to="/" className="item">
+          <Link to="/ColorPicker" className="item">
             <FontAwesomeIcon
               icon={faFillDrip}
               style={{ color: "rgb(148, 157, 178)" }}
@@ -99,40 +85,33 @@ export default function Sidebar({ sidebarVisible }) {
         </div>
         <h2>CHARTS</h2>
         <div className="sideBarsItems2">
-          <Link to="/" className="item">
+          <Link to="/Chartline" className="item">
             <FontAwesomeIcon
               icon={faChartLine}
               style={{ color: "rgb(148, 157, 178)" }}
             />
             line
           </Link>
-          <Link to="/" className="item">
+          <Link to="/Chartarea" className="item">
             <FontAwesomeIcon
               icon={faChartArea}
               style={{ color: "rgb(148, 157, 178)" }}
             />
             area
           </Link>
-          <Link to="/" className="item">
+          <Link to="/Chartbar" className="item">
             <FontAwesomeIcon
               icon={faChartBar}
               style={{ color: "rgb(148, 157, 178)" }}
             />
             bar
           </Link>
-          <Link to="/" className="item">
+          <Link to="/Chartpie" className="item">
             <FontAwesomeIcon
               icon={faChartPie}
               style={{ color: "rgb(148, 157, 178)" }}
             />
             pie
-          </Link>
-          <Link to="/" className="item">
-            <FontAwesomeIcon
-              icon={faCoins}
-              style={{ color: "rgb(148, 157, 178)" }}
-            />
-            financial
           </Link>
         </div>
       </div>
